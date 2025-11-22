@@ -1,0 +1,344 @@
+.diet-entry-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.diet-entry-main {
+  padding: 20px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.diet-entry-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.diet-entry-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.back-arrow {
+  background: white;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.back-arrow:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-1px);
+}
+
+.back-arrow svg {
+  width: 24px;
+  height: 24px;
+}
+
+.page-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  text-align: center;
+  flex: 1;
+}
+
+.diet-entry-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.diet-entry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.section-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.food-name-input {
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.food-name-input:focus {
+  outline: none;
+  border-color: #007bff;
+  background: white;
+}
+
+.food-name-input::placeholder {
+  color: #999;
+}
+
+.interactive-box {
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%;
+}
+
+.interactive-box:hover {
+  background-color: #e9ecef;
+  border-color: #007bff;
+  transform: translateY(-1px);
+}
+
+.box-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.box-icon {
+  font-size: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.box-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.box-value {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.box-subtitle {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.box-arrow {
+  color: #666;
+  transition: transform 0.2s;
+}
+
+.interactive-box:hover .box-arrow {
+  transform: translateX(4px);
+}
+
+.box-arrow svg {
+  width: 20px;
+  height: 20px;
+}
+
+.date-box:hover {
+  border-color: #28a745;
+}
+
+.time-box:hover {
+  border-color: #17a2b8;
+}
+
+.calories-box:hover {
+  border-color: #ffc107;
+}
+
+.picker-wrapper {
+  position: relative;
+}
+
+.hidden-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+  pointer-events: auto;
+  font-size: 16px; /* Prevents zoom on iOS */
+}
+
+.picker-wrapper .interactive-box {
+  position: relative;
+  z-index: 1;
+  pointer-events: none; /* Allow clicks to pass through to input */
+}
+
+.calories-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8f9fa;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.2s;
+}
+
+.calories-input-wrapper:focus-within {
+  border-color: #ffc107;
+  background: white;
+}
+
+.calories-input-icon {
+  font-size: 1.5rem;
+  background: white;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.calories-input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #333;
+  outline: none;
+  padding: 0;
+}
+
+.calories-input::placeholder {
+  color: #999;
+  font-weight: 400;
+}
+
+.calories-unit {
+  font-size: 1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.success-message {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.cancel-button,
+.submit-button {
+  flex: 1;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cancel-button {
+  background-color: #f8f9fa;
+  color: #666;
+  border: 1px solid #dee2e6;
+}
+
+.cancel-button:hover:not(:disabled) {
+  background-color: #e9ecef;
+}
+
+.submit-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.submit-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.cancel-button:disabled,
+.submit-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .diet-entry-main {
+    padding: 16px;
+  }
+  
+  .diet-entry-card {
+    padding: 20px;
+  }
+  
+  .interactive-box {
+    padding: 12px;
+  }
+  
+  .box-icon {
+    font-size: 1.25rem;
+    padding: 6px;
+  }
+  
+  .box-value {
+    font-size: 1rem;
+  }
+}

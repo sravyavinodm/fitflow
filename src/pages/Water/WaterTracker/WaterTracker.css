@@ -1,0 +1,356 @@
+/* WaterTracker Page Styles */
+.water-tracker-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--background-secondary);
+}
+
+.water-tracker-main {
+  flex: 1;
+  padding-bottom: 80px; /* Space for bottom navigation */
+}
+
+.water-tracker-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg) 0;
+}
+
+.back-button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  background: var(--background-color);
+  color: var(--text-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.back-button:hover {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  transform: scale(1.05);
+}
+
+.back-button svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+}
+
+.page-title {
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.water-tracker-card {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xxl);
+  box-shadow: var(--shadow-lg);
+}
+
+.date-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.date-selector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  background: var(--background-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+}
+
+.calendar-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--primary-color);
+}
+
+.calendar-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: 2;
+}
+
+.selected-date {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--text-color);
+  font-family: 'Courier New', monospace;
+}
+
+.water-section {
+  text-align: center;
+  margin-bottom: var(--spacing-xxl);
+}
+
+.water-display {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.water-liters {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: 'Courier New', monospace;
+}
+
+.water-unit {
+  font-size: var(--font-size-lg);
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.hydration-level {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+.level-label {
+  font-size: var(--font-size-md);
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.level-value {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.slider-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.slider-container {
+  position: relative;
+}
+
+.water-slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--secondary-color);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.water-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-fast);
+}
+
+.water-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: var(--shadow-lg);
+}
+
+.water-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+  border: none;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-fast);
+}
+
+.water-slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: var(--shadow-lg);
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--text-light);
+}
+
+.error-message {
+  background: #fdf2f2;
+  color: var(--error-color);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid #fecaca;
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+.success-message {
+  background: #f0fdf4;
+  color: var(--success-color);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid #bbf7d0;
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+.action-buttons {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.benefits-button,
+.ok-button {
+  flex: 1;
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.benefits-button {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.benefits-button:hover:not(:disabled) {
+  background: var(--border-color);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.ok-button {
+  background: var(--primary-color);
+  color: white;
+}
+
+.ok-button:hover:not(:disabled) {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.benefits-button:disabled,
+.ok-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .water-tracker-content {
+    padding: var(--spacing-md);
+  }
+
+  .page-header {
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md) 0;
+  }
+
+  .page-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .water-tracker-card {
+    padding: var(--spacing-xl);
+  }
+
+  .water-liters {
+    font-size: 3rem;
+  }
+
+  .water-unit {
+    font-size: var(--font-size-md);
+  }
+
+  .date-selector {
+    padding: var(--spacing-md);
+  }
+
+  .selected-date {
+    font-size: var(--font-size-md);
+  }
+
+  .action-buttons {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .benefits-button,
+  .ok-button {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* Tablet responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .water-tracker-content {
+    padding: var(--spacing-xl);
+  }
+
+  .water-tracker-card {
+    padding: var(--spacing-xxl);
+  }
+
+  .water-liters {
+    font-size: 4.5rem;
+  }
+}
+
+/* Desktop responsive */
+@media (min-width: 1025px) {
+  .water-tracker-main {
+    padding-bottom: 0; /* No bottom nav on desktop */
+  }
+
+  .water-tracker-content {
+    padding: var(--spacing-xxl) var(--spacing-xl);
+  }
+
+  .water-liters {
+    font-size: 5rem;
+  }
+}

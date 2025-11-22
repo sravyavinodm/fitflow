@@ -1,0 +1,25 @@
+/* StatItem component styles */
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  min-width: 0;
+}
+
+.stat-label {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: var(--font-size-md);
+  color: var(--text-color);
+  font-weight: 600;
+}
+
+.stat-icon {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-xs);
+}
+

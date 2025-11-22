@@ -1,0 +1,102 @@
+/* CalendarPreview Component Styles */
+.calendar-preview {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.calendar-preview:hover {
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.calendar-preview-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+}
+
+.calendar-preview-title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.calendar-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--primary-color);
+}
+
+.calendar-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: 2;
+}
+
+.calendar-preview-content {
+  text-align: center;
+}
+
+.current-date {
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-xs);
+  font-family: 'Courier New', monospace;
+}
+
+.calendar-preview-subtitle {
+  font-size: var(--font-size-sm);
+  color: var(--text-light);
+  margin-bottom: var(--spacing-md);
+}
+
+.calendar-preview-arrow {
+  position: absolute;
+  top: 50%;
+  right: var(--spacing-md);
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  color: var(--text-light);
+  transition: all var(--transition-fast);
+}
+
+.calendar-preview:hover .calendar-preview-arrow {
+  color: var(--primary-color);
+  transform: translateY(-50%) translateX(4px);
+}
+
+.calendar-preview-arrow svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: 2;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .calendar-preview {
+    padding: var(--spacing-md);
+  }
+
+  .calendar-preview-title {
+    font-size: var(--font-size-md);
+  }
+
+  .current-date {
+    font-size: var(--font-size-lg);
+  }
+
+  .calendar-preview-arrow {
+    right: var(--spacing-sm);
+  }
+}

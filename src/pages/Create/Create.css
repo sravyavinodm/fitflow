@@ -1,0 +1,131 @@
+/* Create Page Styles */
+.create-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--background-secondary);
+}
+
+.create-main {
+  flex: 1;
+  padding-bottom: 80px; /* Space for bottom navigation */
+}
+
+.create-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+.create-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg) 0;
+  position: relative;
+}
+
+.back-arrow {
+  background: none;
+  border: none;
+  padding: var(--spacing-sm);
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+}
+
+.back-arrow:hover {
+  background: var(--background-secondary);
+  transform: translateX(-2px);
+}
+
+.back-arrow svg {
+  width: 24px;
+  height: 24px;
+  stroke-width: 2;
+}
+
+.create-title {
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-spacer {
+  width: 40px; /* Same width as back button to maintain balance */
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .create-content {
+    padding: var(--spacing-md);
+  }
+
+  .create-header {
+    justify-content: space-between;
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .back-arrow {
+    padding: var(--spacing-xs);
+  }
+
+  .back-arrow svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .create-title {
+    font-size: var(--font-size-xl);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .header-spacer {
+    width: 32px; /* Adjust for mobile back button size */
+  }
+
+  .create-main {
+    padding-bottom: 70px; /* Adjust for mobile bottom nav */
+  }
+}
+
+/* Tablet responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .create-content {
+    padding: var(--spacing-xl);
+  }
+
+  .create-header {
+    margin-bottom: var(--spacing-xl);
+  }
+}
+
+/* Desktop responsive */
+@media (min-width: 1025px) {
+  .create-main {
+    padding-bottom: 0; /* No bottom nav on desktop */
+  }
+
+  .create-content {
+    padding: var(--spacing-xxl) var(--spacing-xl);
+  }
+
+  .create-header {
+    padding: var(--spacing-xxl) 0;
+  }
+
+  .create-title {
+    font-size: 2.5rem;
+  }
+}

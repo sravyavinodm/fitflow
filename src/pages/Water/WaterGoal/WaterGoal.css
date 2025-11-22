@@ -1,0 +1,390 @@
+/* WaterGoal Page Styles */
+.water-goal-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--background-secondary);
+}
+
+.water-goal-main {
+  flex: 1;
+  padding-bottom: 80px; /* Space for bottom navigation */
+}
+
+.water-goal-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-lg);
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg) 0;
+}
+
+.back-button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  background: var(--background-color);
+  color: var(--text-color);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.back-button:hover {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  color: white;
+  transform: scale(1.05);
+}
+
+.back-button svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+}
+
+.page-title {
+  font-size: var(--font-size-xxl);
+  font-weight: 700;
+  color: var(--text-color);
+  margin: 0;
+}
+
+.water-goal-card {
+  background: var(--background-color);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xxl);
+  box-shadow: var(--shadow-lg);
+}
+
+.question-section {
+  text-align: center;
+  margin-bottom: var(--spacing-xxl);
+}
+
+.question {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: var(--spacing-lg);
+}
+
+.water-display {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+.water-liters {
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  font-family: 'Courier New', monospace;
+}
+
+.water-unit {
+  font-size: var(--font-size-lg);
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.slider-section {
+  margin-bottom: var(--spacing-xxl);
+}
+
+.slider-container {
+  position: relative;
+}
+
+.water-slider {
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  background: var(--secondary-color);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+
+.water-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-fast);
+}
+
+.water-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: var(--shadow-lg);
+}
+
+.water-slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  cursor: pointer;
+  border: none;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-fast);
+}
+
+.water-slider::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: var(--shadow-lg);
+}
+
+.slider-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--text-light);
+}
+
+.recommendation-section {
+  margin-bottom: var(--spacing-xl);
+}
+
+.recommendation-box {
+  background: var(--background-secondary);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  transition: all var(--transition-fast);
+}
+
+.recommendation-box:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.recommendation-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.recommendation-icon svg {
+  width: 24px;
+  height: 24px;
+  color: white;
+  stroke-width: 2;
+}
+
+.recommendation-content {
+  flex: 1;
+}
+
+.recommendation-title {
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  color: var(--text-color);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.recommendation-text {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.recommendation-subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--text-light);
+  margin: 0;
+  font-style: italic;
+}
+
+.error-message {
+  background: #fdf2f2;
+  color: var(--error-color);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid #fecaca;
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+.success-message {
+  background: #f0fdf4;
+  color: var(--success-color);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-md);
+  border: 1px solid #bbf7d0;
+  margin-bottom: var(--spacing-md);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.log-button,
+.save-button {
+  padding: var(--spacing-lg) var(--spacing-xl);
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.log-button.primary {
+  background: var(--primary-color);
+  color: white;
+}
+
+.log-button.primary:hover:not(:disabled) {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.save-button.secondary {
+  background: var(--secondary-color);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.save-button.secondary:hover:not(:disabled) {
+  background: var(--border-color);
+  transform: translateY(-2px);
+}
+
+.log-button:disabled,
+.save-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .water-goal-content {
+    padding: var(--spacing-md);
+  }
+
+  .page-header {
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-md) 0;
+  }
+
+  .page-title {
+    font-size: var(--font-size-xl);
+  }
+
+  .water-goal-card {
+    padding: var(--spacing-xl);
+  }
+
+  .question {
+    font-size: var(--font-size-lg);
+  }
+
+  .water-liters {
+    font-size: 3rem;
+  }
+
+  .water-unit {
+    font-size: var(--font-size-md);
+  }
+
+  .recommendation-box {
+    flex-direction: column;
+    text-align: center;
+    gap: var(--spacing-sm);
+  }
+
+  .recommendation-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .recommendation-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .action-buttons {
+    gap: var(--spacing-sm);
+  }
+
+  .log-button,
+  .save-button {
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-sm);
+  }
+}
+
+/* Tablet responsive */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .water-goal-content {
+    padding: var(--spacing-xl);
+  }
+
+  .water-goal-card {
+    padding: var(--spacing-xxl);
+  }
+
+  .water-liters {
+    font-size: 4.5rem;
+  }
+}
+
+/* Desktop responsive */
+@media (min-width: 1025px) {
+  .water-goal-main {
+    padding-bottom: 0; /* No bottom nav on desktop */
+  }
+
+  .water-goal-content {
+    padding: var(--spacing-xxl) var(--spacing-xl);
+  }
+
+  .water-liters {
+    font-size: 5rem;
+  }
+
+  .action-buttons {
+    flex-direction: row;
+    gap: var(--spacing-lg);
+  }
+
+  .log-button,
+  .save-button {
+    flex: 1;
+  }
+}
